@@ -5,12 +5,12 @@ pipeline {
             parallel {
                 stage('tester A') {
                     steps {
-                        sh "npm run cypress:run"
+                        sh "npm run cy:run_edge"
                     }
                 }
                 stage('tester B') {
                     steps {
-                        sh "npm run cypress:run"
+                        sh "npm run run_chrome"
                     }
                 }
             }

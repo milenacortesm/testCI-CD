@@ -6,8 +6,8 @@
     "scripts": {
       "cypress:run": "npx cypress run --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --parallel",
       "cypress:open": "npx cypress open",
-      "cy:run_chrome": "npx cypress run --browser chrome --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group chrome --ci-build-id $(date +%s)",
-      "cy:run_edge": "npx cypress run --browser edge --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group edge --ci-build-id $(date +%s)",
+      "cy:run_chrome": "npx cypress run --browser chrome --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group chrome --ci-build-id 4",
+      "cy:run_edge": "npx cypress run --browser edge --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group edge --ci-build-id 5",
       "cy:run_firefox": "npx cypress run --browser firefox --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group firefox --ci-build-id $(date +%s)",
       "cy:run_electron": "npx cypress run --browser electron --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group electron --ci-build-id $(date +%s)",
       "cy:run_webkit": "npx cypress run --browser webkit --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group webkit --ci-build-id $(date +%s)",

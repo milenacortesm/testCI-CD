@@ -1,4 +1,5 @@
 pipeline {
+    agent any  // Define el agente donde se ejecutará el pipeline. Puedes usar 'any' para cualquier agente disponible.
     stages{
         stage ('cypress parallel test'){
             parallel{

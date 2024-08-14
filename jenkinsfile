@@ -1,0 +1,24 @@
+pipeline {
+    stages{
+        stage ('cypress parallel test'){
+            parallel{
+                stage('tester A'){
+                    steps{
+                        sh "npm run cypress:run"
+                    }
+                }
+        
+                stage('tester B'){
+                    agent{
+                        label "mac"
+                    } 
+                    steps{
+                        sh "npm run cypress:run"
+                    }
+                }
+
+            }
+        }
+    }
+    }
+    

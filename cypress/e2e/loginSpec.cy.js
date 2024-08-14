@@ -3,7 +3,7 @@ import LoginController from '../support/controllers/loginController.js';
 describe('Login', () => {
   const loginController = new LoginController();
 
-  it('should login successfully', () => {
+  it('Should login successfully', () => {
     const username = 'chinetepro@gmail.com';
     const password = 'R0b3rt0250390!';
 
@@ -14,7 +14,7 @@ describe('Login', () => {
     cy.url().should('eq', 'https://sistema.appbarber.com.br/index.php#/agenda');
   });
 
-  it('should not login with wrong password', () => {
+  it('Should not login with wrong password', () => {
     const username = 'chinetepro@gmail.com';
     const wrongPassword = 'wrongpassword';
 
@@ -24,7 +24,7 @@ describe('Login', () => {
     cy.contains('E-mail ou Senha inválidos').should('be.visible');
   });
 
-  it('should not login with wrong username', () => {
+  it('Should not login with wrong username', () => {
     const username = 'wrong user name';
     const wrongPassword = 'R0b3rt0250390!';
 

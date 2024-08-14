@@ -1,9 +1,16 @@
-{
-  "devDependencies": {
-    "cypress": "^13.6.4"
-  },
-  "scripts": {
-    "cypress:run": "cypress run",
-    "cypress:open": "cypress open"
+  {
+    "devDependencies": {
+      "cypress": "^13.13.2",
+      "playwright-webkit": "^1.46.0"
+    },
+    "scripts": {
+      "cypress:run": "npx cypress run --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --parallel",
+      "cypress:open": "npx cypress open",
+      "cy:run_chrome": "npx cypress run --browser chrome --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group chrome --ci-build-id $(date +%s)",
+      "cy:run_edge": "npx cypress run --browser edge --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group edge --ci-build-id $(date +%s)",
+      "cy:run_firefox": "npx cypress run --browser firefox --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group firefox --ci-build-id $(date +%s)",
+      "cy:run_electron": "npx cypress run --browser electron --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group electron --ci-build-id $(date +%s)",
+      "cy:run_webkit": "npx cypress run --browser webkit --record --key e93cb9a6-6784-48ab-97f1-07d035f1f6d9 --group webkit --ci-build-id $(date +%s)",
+      "cy:run_all_browsers": "npm run cy:run_chrome & npm run cy:run_edge & npm run cy:run_firefox & npm run cy:run_electron & npm run cy:run_webkit"
+    }
   }
-}
